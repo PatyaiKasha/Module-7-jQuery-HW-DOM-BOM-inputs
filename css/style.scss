@@ -44,3 +44,24 @@ li {
 .minus-btn {
     padding: 0 2px;
 }
+
+.modal {
+    // position: absolute;
+    visibility: hidden;
+    width: 250px;
+    height: 100px;
+    margin: 0 auto;
+    background: #eee;
+    text-align: center;
+    transition: all .75s ease;
+    &::after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+.toggle-btn {
+    margin: 8px 8px 8px 0; // position: relative;
+}
