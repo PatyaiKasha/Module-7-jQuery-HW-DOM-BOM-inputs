@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unit-7. Working whith DOM</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div id="wrapper" class="wrapper">
+        <div class="task1">
+            <h2>Задача 1</h2>
+            <p class="task-text">Добавьте на страницу элемент input[type=«text»]. Справа от input расположите кнопку «+». При нажатии кнопки «+» добавьте еще один элемент input ниже. Возле появившегося элемента создайте кнопку «-» при нажатии на которую данный input будет удаляться. Внизу формы расположите кнопку «собрать», по нажатию которой текст из элементов input будет выведен в расположенный на странице textarea. Внимание: Количество input на странице не больше. Удалять можно все элементы input кроме последнего.
+            </p>
+            <ul id="mainUl">
+                <li>
+                    <input class="inputList">
+                    <button id="plus-btn" type="button">+</button>
+                </li>
+            </ul>
+            <button class="collect">Собрать ...</button>
+            <br>
+            <textarea id="text-area" name="text-area" cols="30" rows="10"></textarea>
+        </div>
+        <hr>
+        <div class="task2">
+            <h2>Задача 2</h2>
+            <p class="task-text">Модифицируйте задание 1, добавив три input[type=«radio»]. В опциях первого укажите «Четные», у второго — «Нечетные», у третьего — «Все». В зависимости от выбранной опции, информация считывается соответственно из четных, нечетных или всех input на странице. По умолчанию выбран последний radiobutton.
+            </p>
+            <input id="even" class="radioT2" type="radio" name="num2">
+            <label for="even">:Even</label>
+            <input id="odd" class="radioT2" type="radio" name="num2">
+            <label for="odd">:Odd</label>
+            <input id="even-odd" class="radioT2" type="radio" name="num2" checked>
+            <label for="even-odd">:Even and Odd</label>
+            <br>
+            <button class="collect2">Сортировать ...</button>
+            <br>
+            <textarea id="text-area2" name="text-area" cols="30" rows="10"></textarea>
+        </div>
+        <hr>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

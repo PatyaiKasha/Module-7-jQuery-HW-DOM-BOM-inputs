@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.task-text {
+    margin: 16px 0;
+}
+
+hr {
+    margin-top: 24px;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 0 24px;
+    padding: 24px;
+    height: 100%;
+}
+
+input {
+    margin: 8px 8px 8px 0;
+}
+
+.collect {
+    margin: 8px 8px 16px 0;
+}
+
+ul {
+    display: block;
+}
+
+li {
+    list-style-type: none;
+}
+
+.plus-btn {
+    padding: 0 3px;
+}
+
+.minus-btn {
+    padding: 0 2px;
+}
