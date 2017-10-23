@@ -31,10 +31,13 @@ input {
 
 ul {
     display: block;
+    li {
+        list-style-type: none;
+    }
 }
 
-li {
-    list-style-type: none;
+ol {
+    padding: 0 0 0 24px;
 }
 
 .plus-btn {
@@ -46,14 +49,18 @@ li {
 }
 
 .modal {
-    // position: absolute;
+    position: fixed;
     visibility: hidden;
+    top: calc(50% - 100px/2);
+    left: calc(50% - 250px/2);
     width: 250px;
     height: 100px;
     margin: 0 auto;
     background: #eee;
     text-align: center;
-    transition: all .75s ease;
+    button {
+        margin: 16px;
+    }
     &::after {
         content: '';
         display: inline-block;
@@ -63,5 +70,9 @@ li {
 }
 
 .toggle-btn {
-    margin: 8px 8px 8px 0; // position: relative;
+    margin: 8px 8px 8px 0;
+}
+
+.heroList {
+    color: red;
 }

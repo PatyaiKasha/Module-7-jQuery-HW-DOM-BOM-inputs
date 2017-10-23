@@ -25,9 +25,11 @@ input {
 
 ul {
   display: block; }
+  ul li {
+    list-style-type: none; }
 
-li {
-  list-style-type: none; }
+ol {
+  padding: 0 0 0 24px; }
 
 .plus-btn {
   padding: 0 3px; }
@@ -36,13 +38,17 @@ li {
   padding: 0 2px; }
 
 .modal {
+  position: fixed;
   visibility: hidden;
+  top: calc(50% - 100px/2);
+  left: calc(50% - 250px/2);
   width: 250px;
   height: 100px;
   margin: 0 auto;
   background: #eee;
-  text-align: center;
-  transition: all .75s ease; }
+  text-align: center; }
+  .modal button {
+    margin: 16px; }
   .modal::after {
     content: '';
     display: inline-block;
@@ -51,5 +57,8 @@ li {
 
 .toggle-btn {
   margin: 8px 8px 8px 0; }
+
+.heroList {
+  color: red; }
 
 /*# sourceMappingURL=style.css.map */

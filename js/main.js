@@ -85,11 +85,38 @@ $('.collect2').on('click', function(event) {
 // Задание 4. Реализуйте по нажатию на кнопке всплывающее окно с двумя кнопками. Первая кнопка «Опция №1, вторая кнопка «Опция №2. По нажатию на кнопку окно закрывается, а на странице выводится надпись «Вы выбрали опцию №"x"» и номер выбранной опции.
 
 $('#toggle-btn').on('click', function(event) {
-    event.preventDefault();
     $('.modal').css('visibility', 'visible');
+    $('#pos-btn').text('What btn is Lucky ?');
+});
+$('#left').on('click', function(event) {
+    $('.modal').css('visibility', 'hidden');
+    $('#pos-btn').text($(this).text() + ' btn is Lucky btn :)');
+});
+$('#right').on('click', function(event) {
+    $('.modal').css('visibility', 'hidden');
+    $('#pos-btn').text($(this).text() + ' btn is Lucky btn :)');
 });
 
 // Задание 5. Дан список из элементов. Реализуйте скрипт, который отслеживает клик на элементе списка и подсвечивает его красным цветом. При повторном клике, цвет убирается. Добавьте Input, который позволяет добавлять элементы в список. На них также, распостраняется событие click.
+
+
+
+
+$('#addHero').on('click', function(event) {
+    if ($('#inputHero').val() == '') {
+        $('#inputHero').attr('placeholder', 'Enter Hero name !!!').css('background', 'pink');
+    } else {
+        $('#heroList').append('<li>' + $('#inputHero').val() + '</li>')
+        $('#inputHero').val('');
+        $('#inputHero').attr('placeholder', '').css('background', 'none');
+    }
+
+    $('#heroList li').on('click', function(event) {
+        $(this).each(function(index, el) {
+            $(el).toggleClass('heroList');
+        });
+    });
+});
 
 // Задание 6. Дан блок с изображением. При наведении мыши, на блок, открывается текстовый блок с черным фоном, прозрачность фона .. Направление раскрытия — с правой части родителя. Если мышь убрана — то блок закрывается с задержкой по времени.
 
