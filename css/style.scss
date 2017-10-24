@@ -76,3 +76,18 @@ ol {
 .heroList {
     color: red;
 }
+
+.bottom {
+    width: 512px;
+    height: 512px;
+    background: url('../img/java.png');
+    margin: 24px auto 0 auto;
+    position: relative;
+    .top {
+        width: 512px;
+        height: 512px;
+        background: #000;
+        opacity: .75;
+        position: absolute;
+    }
+}
