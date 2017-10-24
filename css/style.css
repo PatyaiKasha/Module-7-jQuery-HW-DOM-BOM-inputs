@@ -66,12 +66,17 @@ ol {
   height: 512px;
   background: url("../img/java.png");
   margin: 24px auto 0 auto;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .bottom .top {
     width: 512px;
     height: 512px;
     background: #000;
     opacity: .75;
-    position: absolute; }
+    position: absolute;
+    left: -512px; }
+    .bottom .top p {
+      color: #fff;
+      padding: 24px; }
 
 /*# sourceMappingURL=style.css.map */

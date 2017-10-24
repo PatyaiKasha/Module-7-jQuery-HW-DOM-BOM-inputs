@@ -121,7 +121,13 @@ $('.task5').on('click', '#heroList li', function(event) {
 
 // Задание 6. Дан блок с изображением. При наведении мыши, на блок, открывается текстовый блок с черным фоном, прозрачность фона .. Направление раскрытия — с правой части родителя. Если мышь убрана — то блок закрывается с задержкой по времени.
 
-
+$('.bottom').hover(function() {
+    /* Stuff to do when the mouse enters the element */
+    $('.top').animate({ left: '0' }, 1000);
+}, function() {
+    /* Stuff to do when the mouse leaves the element */
+    $('.top').animate({ left: '-512px' }, 1000);
+});
 
 
 

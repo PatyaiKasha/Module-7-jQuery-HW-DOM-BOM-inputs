@@ -83,11 +83,17 @@ ol {
     background: url('../img/java.png');
     margin: 24px auto 0 auto;
     position: relative;
+    overflow: hidden;
     .top {
         width: 512px;
         height: 512px;
         background: #000;
         opacity: .75;
         position: absolute;
+        left: -512px;
+        p {
+            color: #fff;
+            padding: 24px;
+        }
     }
 }
