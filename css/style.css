@@ -1,7 +1,7 @@
 * {
+  box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+  padding: 0; }
 
 .task-text {
   margin: 16px 0; }
@@ -10,12 +10,12 @@ hr {
   margin-top: 24px; }
 
 .wrapper {
-  width: 80%;
-  max-width: 900px;
-  margin: 0 auto;
   box-shadow: 0 0 24px;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 900px;
   padding: 24px;
-  height: 100%; }
+  width: 80%; }
 
 input {
   margin: 8px 8px 8px 0; }
@@ -38,15 +38,15 @@ ol {
   padding: 0 2px; }
 
 .modal {
-  position: fixed;
-  visibility: hidden;
-  top: calc(50% - 100px/2);
-  left: calc(50% - 250px/2);
-  width: 250px;
-  height: 100px;
-  margin: 0 auto;
   background: #eee;
-  text-align: center; }
+  height: 100px;
+  left: calc(50% - 250px/2);
+  margin: 0 auto;
+  position: fixed;
+  text-align: center;
+  top: calc(50% - 100px/2);
+  visibility: hidden;
+  width: 250px; }
   .modal button {
     margin: 16px; }
   .modal::after {
@@ -59,24 +59,34 @@ ol {
   margin: 8px 8px 8px 0; }
 
 .heroList {
-  color: red; }
+  color: #bd5e55; }
 
 .bottom {
-  width: 512px;
-  height: 512px;
   background: url("../img/java.png");
-  margin: 24px auto 0 auto;
+  height: 512px;
+  margin: 24px auto 0;
+  overflow: hidden;
   position: relative;
-  overflow: hidden; }
+  width: 512px; }
   .bottom .top {
-    width: 512px;
-    height: 512px;
     background: #000;
-    opacity: .75;
+    height: 512px;
+    left: -512px;
+    opacity: 0.75;
     position: absolute;
-    left: -512px; }
+    width: 512px; }
     .bottom .top p {
       color: #fff;
       padding: 24px; }
+
+span {
+  background: #b8623e;
+  bottom: 0;
+  height: 150px;
+  position: fixed;
+  width: 100%; }
+
+footer {
+  height: 250px; }
 
 /*# sourceMappingURL=style.css.map */
