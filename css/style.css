@@ -79,11 +79,16 @@ ol {
       color: #fff;
       padding: 24px; }
 
-span {
+.task7 img {
+  margin: 0 16px; }
+
+.info-block span {
   background: #b8623e;
   bottom: 0;
   height: 150px;
+  padding: 16px;
   position: fixed;
+  text-align: center;
   width: 100%; }
 
 footer {

@@ -103,12 +103,22 @@ ol {
   }
 }
 
-span {
-  background: #b8623e;
-  bottom: 0;
-  height: 150px;
-  position: fixed;
-  width: 100%;
+.task7 {
+  img {
+    margin: 0 16px;
+  }
+}
+
+.info-block {
+  span {
+    background: #b8623e;
+    bottom: 0;
+    height: 150px;
+    padding: 16px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 footer {
