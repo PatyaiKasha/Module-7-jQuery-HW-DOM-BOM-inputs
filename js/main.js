@@ -106,10 +106,12 @@ $('.task5').on('click', '#heroList li', function(event) {
 // Задание 6. Дан блок с изображением. При наведении мыши, на блок, открывается текстовый блок с черным фоном, прозрачность фона .. Направление раскрытия — с правой части родителя. Если мышь убрана — то блок закрывается с задержкой по времени.
 
 $('.bottom').hover(function() {
+  /* Stuff to do when the mouse enters the element */
   $('.top').animate({
     left: '0'
   }, 1000);
 }, function() {
+  /* Stuff to do when the mouse leaves the element */
   $('.top').animate({
     left: '-512px'
   }, 1000);
@@ -117,19 +119,40 @@ $('.bottom').hover(function() {
 
 // Задание 7. Реализуйте скрипт, который при наведении мыши на элементы (изображение или гиперссылка), будет внизу страницы показывать блок, в котором указан адрес изображения, и атрибут alt, если это изображение и адрес ссылки и атрибут title и target, если это гиперссылка. При отсуствии атрибутов — выводится красным предупреждение.
 
+// Задание 8. Модифицируйте скрипт из задачи 7 таким образом, чтобы те изображения, которые не имеют атрибут alt, подсвечивались красным цветом.
+
+// Проверка картинок на наличие атрибутов
 $('.task7 img').each(function(index, el) {
   $(el).hover(function() {
     $('.info-block').show();
     if ($(el).attr('alt') == undefined) {
-      $('.info-block span').text('Warning, attr "alt" is absent').css('color', 'yellow');
+      $('.info-block span').text('Warning, some "attr" is absent').css('color', 'yellow');
+      $(el).addClass('attr-absent');
     } else {
       $('.info-block span').html('attr src: ' + $(el).attr('src') + '<br>' + 'attr alt: ' + $(el).attr('alt')).css('color', 'black');
     }
   }, function() {
     $('.info-block').hide();
+    $(el).removeClass('attr-absent');
   });
 });
-// Задание 8. Модифицируйте скрипт из задачи 7 таким образом, чтобы те изображения, которые не имеют атрибут alt, подсвечивались красным цветом.
+
+// Проверка ссылок на наличие атрибутов
+$('.task7 a').each(function(index, el) {
+  $(el).hover(function() {
+    $('.info-block').show();
+    if ($(el).attr('title') == undefined || $(el).attr('target') == undefined) {
+      $('.info-block span').text('Warning, some "attr" is absent').css('color', 'yellow');
+      $(el).addClass('attr-absent'); // Task-8
+
+    } else {
+      $('.info-block span').html('attr href: ' + $(el).attr('href') + '<br>' + 'attr title: ' + $(el).attr('title') + '<br>' + 'attr target: ' + $(el).attr('target')).css('color', 'black');
+    }
+  }, function() {
+    $('.info-block').hide();
+    $(el).removeClass('attr-absent'); // Task-8
+  });
+});
 
 // Задание 9. Создайте скрипт для проверки наличия на странице элементов h1-h6 выводя при этом их количество. Если какого-либо заголовка нет — вывести предупреждение.
 

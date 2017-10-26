@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -104,8 +105,10 @@ ol {
 }
 
 .task7 {
+  a,
   img {
-    margin: 0 16px;
+    margin: 0 12px;
+    padding: 4px;
   }
 }
 
@@ -119,6 +122,10 @@ ol {
     text-align: center;
     width: 100%;
   }
+}
+
+.attr-absent {
+  box-shadow: 0 0 10px #e73934;
 }
 
 footer {

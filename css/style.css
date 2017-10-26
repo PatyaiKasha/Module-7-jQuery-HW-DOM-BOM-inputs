@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: sans-serif;
   margin: 0;
   padding: 0; }
 
@@ -79,8 +80,10 @@ ol {
       color: #fff;
       padding: 24px; }
 
+.task7 a,
 .task7 img {
-  margin: 0 16px; }
+  margin: 0 12px;
+  padding: 4px; }
 
 .info-block span {
   background: #b8623e;
@@ -90,6 +93,9 @@ ol {
   position: fixed;
   text-align: center;
   width: 100%; }
+
+.attr-absent {
+  box-shadow: 0 0 10px #e73934; }
 
 footer {
   height: 250px; }
