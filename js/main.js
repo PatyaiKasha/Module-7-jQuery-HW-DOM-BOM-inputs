@@ -153,6 +153,25 @@ $('.task7 a').each(function(index, el) {
 });
 
 // Задание 9. Создайте скрипт для проверки наличия на странице элементов h1-h6 выводя при этом их количество. Если какого-либо заголовка нет — вывести предупреждение.
+
+// var hMass = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+
+// for (var i = 0; i < hMass.length; i++) {
+
+//     var elem = hMass[i];
+
+//     console.log($(elem));
+
+// $('#num-of-h').on('click', function(event) {
+//     if ($(elem).length <= 0) {
+//         $('#hh').append('Тэг ' + elem + ' отсутсвует на странице<br>');
+//     } else {
+//         $('#hh').append($(elem).length + ' тэгов ' + elem + ' на странице<br>');
+//     }
+// });
+
+// }
+
 $('#num-of-h').on('click', function(event) {
     $('#hh').append('Кол-во заголовков всего: ' + $('h1,h2,h3,h4,h5,h6').length + 'шт.<br>');
     if ($('h1').length <= 0) {
